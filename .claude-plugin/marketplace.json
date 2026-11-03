@@ -5,8 +5,8 @@
     "url": "https://github.com/thusalapi"
   },
   "metadata": {
-    "description": "Practical Claude skills for small-business content and automation",
-    "version": "1.0.0"
+    "description": "Practical Claude skills for software engineering, content production and automation",
+    "version": "1.1.0"
   },
   "plugins": [
     {
@@ -14,7 +14,18 @@
       "description": "Make 9:16 education videos for a small business from real footage, with offline AI voice, captions, motion graphics, sound mix and crop-safe covers.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/explainer-reel"]
+      "skills": [
+        "./skills/explainer-reel"
+      ]
+    },
+    {
+      "name": "project-standards",
+      "description": "Create and enforce a codebase's standards pack (locked decisions, layering rules, definition of done, progress log) with a regex rule checker, so AI-written code stays consistent.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/project-standards"
+      ]
     }
   ]
 }

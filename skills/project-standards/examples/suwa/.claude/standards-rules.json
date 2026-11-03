@@ -1,0 +1,66 @@
+{
+  "rules": [
+    {
+      "id": "no-raw-hex",
+      "files": [
+        "src/components/**/*.tsx",
+        "src/app/**/*.tsx"
+      ],
+      "exclude": [
+        "src/components/pdf/**"
+      ],
+      "pattern": "#[0-9a-fA-F]{6}\\b",
+      "message": "Use a semantic Tailwind token from lib/design, never a raw hex colour."
+    },
+    {
+      "id": "no-component-library",
+      "files": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "package.json"
+      ],
+      "pattern": "@radix-ui/|shadcn|@mui/|antd|@chakra-ui/",
+      "message": "Locked decision: no component library. Hand-build with Tailwind and atomic components."
+    },
+    {
+      "id": "no-server-import-in-client",
+      "files": [
+        "src/**/*.tsx",
+        "src/**/*.ts"
+      ],
+      "only_if_file_contains": "^[\"']use client[\"']",
+      "pattern": "from [\"']@/lib/(db|auth|backup|audit)(?!/actions)",
+      "ignore_lines_matching": "^\\s*import type ",
+      "message": "Client components must not import server-only modules. Pass data down from a Server Component or call a Server Action. Importing a 'use server' actions module is fine."
+    },
+    {
+      "id": "no-brand-literal",
+      "files": [
+        "src/components/**/*.tsx",
+        "src/app/**/*.tsx"
+      ],
+      "pattern": "[>\"'`]\\s*Suwa\\b",
+      "ignore_lines_matching": "^\\s*(//|\\*|/\\*)",
+      "message": "Read the product name from brand.* in lib/branding, never hard-code it."
+    },
+    {
+      "id": "no-orm-migrations",
+      "files": [
+        "package.json",
+        "scripts/**"
+      ],
+      "pattern": "drizzle-kit (push|migrate)|prisma migrate",
+      "message": "Schema changes go through Liquibase changesets, not ORM migrations."
+    },
+    {
+      "id": "no-float-money",
+      "files": [
+        "src/lib/bills/**/*.ts",
+        "src/lib/catalog/**/*.ts"
+      ],
+      "pattern": "parseFloat\\(|toFixed\\(",
+      "message": "Money is integer minor units (LKR cents). Use the i18n currency formatter for display.",
+      "severity": "warning"
+    }
+  ]
+}
