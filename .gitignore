@@ -1,0 +1,7 @@
+build_*/
+*.mp4
+!skills/*/assets/*.mp4
+__pycache__/
+*.pyc
+.env
+.DS_Store

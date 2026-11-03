@@ -1,0 +1,88 @@
+{
+  "slug": "demo-coffee",
+  "episode": "01",
+  "title": "3 rules for better coffee at home",
+  "voice": "af_heart",
+  "speed": 1.08,
+  "output": "demo.mp4",
+  "brand": {
+    "name": "Hearth & Bean",
+    "series": "Hearth & Bean Explains",
+    "colors": { "bg": "#1E140F", "bg2": "#3A2519", "text": "#F6EEE3", "accent": "#D9A066", "card": "#F6EEE3" }
+  },
+  "cover": {
+    "lines": [["Better coffee", false], ["at home", true]],
+    "kicker": "Hearth & Bean Explains",
+    "sub": "3 rules baristas follow",
+    "size": 130
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "vo": "Want café-quality coffee at home? Baristas follow three simple rules.",
+      "pad": 0.4,
+      "captions": false,
+      "headline": [["Better coffee", false], ["at home", true]],
+      "headline_at": 0.05,
+      "overlays": [
+        { "type": "bignumber", "text": "3", "start": 1.0, "y": 560 },
+        { "type": "kicker", "text": "Rules baristas follow", "start": 1.8 }
+      ],
+      "sfx": [[0.0, "impact"], [1.0, "whoosh"], [1.8, "swipe"]]
+    },
+    {
+      "id": "s2",
+      "vo": "One. Use water just off the boil, around ninety three degrees. Boiling water burns the grounds.",
+      "label": "Rule 01 / 03",
+      "headline": [["Mind the", false], ["temperature.", true]],
+      "overlays": [{ "type": "measure", "value": 93, "unit": "°C", "start": 1.2, "y": 1100 }],
+      "sfx": [[0.0, "whoosh"], [1.2, "tick"], [1.8, "tick"], [2.6, "pop"]]
+    },
+    {
+      "id": "s3",
+      "vo": "Two. Weigh it. About sixteen grams of water for every gram of coffee keeps each cup the same.",
+      "label": "Rule 02 / 03",
+      "headline": [["Weigh,", false], ["don't guess.", true]],
+      "overlays": [
+        { "type": "bignumber", "text": "1:16", "size": 380, "start": 0.6, "y": 600 },
+        { "type": "tag", "text": "Coffee to water ratio", "start": 1.4, "y": 1150 }
+      ],
+      "sfx": [[0.0, "whoosh"], [0.6, "thud"], [1.4, "pop"]]
+    },
+    {
+      "id": "s4",
+      "vo": "Three. Grind just before you brew. Fresh grounds keep the oils that carry flavour.",
+      "label": "Rule 03 / 03",
+      "headline": [["Grind it", false], ["fresh.", true]],
+      "overlays": [
+        { "type": "layers", "base_label": "Fresh grounds", "top_label": "Aromatic oils",
+          "base_color": "#6B4329", "top_color": "#C98B4E", "base_at": 1.2, "layer_at": 2.0 }
+      ],
+      "sfx": [[0.0, "whoosh"], [1.2, "pop"], [2.0, "swipe"]]
+    },
+    {
+      "id": "s5",
+      "vo": "Quick recap before you brew.",
+      "pad": 1.6,
+      "captions": false,
+      "headline": [["Quick", false], ["recap.", true]],
+      "overlays": [
+        { "type": "bullets", "items": ["Water at about 93 °C", "1 gram coffee : 16 grams water", "Grind right before brewing"],
+          "starts": [0.6, 1.2, 1.8], "y": 900 }
+      ],
+      "sfx": [[0.0, "whoosh"], [0.6, "pop"], [1.2, "pop"], [1.8, "pop"]]
+    },
+    {
+      "id": "s6",
+      "vo": "Want a brew guide for your machine? Send us a message and we'll share one.",
+      "pad": 2.0,
+      "end": {
+        "headline": [["Want a guide", false], ["for your machine?", true]],
+        "button": "Message us for a brew guide",
+        "contact": "@hearthandbean",
+        "sub": "Fictional brand  ·  demo of explainer-reel"
+      },
+      "sfx": [[0.0, "whoosh"], [0.3, "ding"], [1.4, "msg"]]
+    }
+  ]
+}
